@@ -1,5 +1,6 @@
 import React from 'react';
-import Apc from './Img/apc-logo.png'
+import Apc from '../Img/apc-logo.png'
+import { Link } from 'react-router-dom';
 
 const candidates = [
   { id: 'A', party: 'APC', },
@@ -9,8 +10,8 @@ const candidates = [
 
 const CandidateSelection = () => {
   return (
-    <div className="flex justify-center items-center my-4 bg-gray-100">
-      <div className="bg-gray-800 text-white rounded-lg max-w-md shadow-lg min-w-72">
+    <div className="max-w-md mx-3 xm:mx-auto my-3 py-6 px-3 rounded-lg shadow-lg text-white bg-gray-900">
+      <Link to='/cast-vote'>
         <h2 className="text-sm pl-1 font-normal text-left my-4">Select your candidate & proceed ...</h2>
         <div className="space-y-4 mb-4 pt-0">
           {candidates.map((candidate) => (
@@ -25,7 +26,7 @@ const CandidateSelection = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

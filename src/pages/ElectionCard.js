@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ElectionCard() {
   // State to store the time remaining
@@ -35,13 +36,13 @@ function ElectionCard() {
   }, []);
 
   return (
-    <div className="max-w-sm mx-14 md:mx-auto my-3 bg-gradient-to-r  from-yellow-400 to-yellow-200 p-6 rounded-lg shadow-lg">
+    <div className=" max-w-sm xs:mx-3 xm:mx-auto my-3 bg-gradient-to-r  from-yellow-400 to-yellow-200 py-6 px-3 rounded-lg shadow-lg">
       <h2 className="text-custom-sm font-semibold text-gray-900">2023 Presidential Election</h2>
       <p className="text-custom-sm text-gray-700 mt-2 font-light">Total Votes</p>
       <h1 className="text-2xl tracking-widest font-semibold text-gray-900 mt-2">475,831</h1>
       <p className="text-sm text-gray-700 mt-2">End Time Countdown</p>
       <div className="flex justify-between text-center mt-2">
-        <div>
+        <div> 
           <p className="text-sm font-normal text-gray-700">Days</p>
           <p className="text-xl font-semibold">{timeLeft.days}</p>
         </div>
@@ -58,9 +59,11 @@ function ElectionCard() {
           <p className="text-xl font-bold">{timeLeft.seconds}</p>
         </div>
       </div>
-      <button className="mt-6 w-full bg-gradient-to-r from-blue-500 to-black text-white py-2 rounded-lg text-lg font-semibold hover:shadow-lg">
-        Cast a vote
-      </button>
+      <Link to='/select-candidate'>        
+        <button className="mt-6 w-full bg-gradient-to-r mx-auto from-blue-500 to-black text-white py-2 rounded-lg text-lg font-semibold hover:shadow-lg">
+          Cast a vote
+        </button>
+      </Link>
     </div>
   );
 }

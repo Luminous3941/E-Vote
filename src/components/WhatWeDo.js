@@ -1,6 +1,6 @@
 import React from 'react';
-import votingIcon from './Img/voting-icon.png';
-import blockchainIcon from './Img/blockchain-icon.png';
+import votingIcon from '../Img/voting-icon.png';
+import blockchainIcon from '../Img/blockchain-icon.png';
 
 const WhatWeDo = () => {
   return (

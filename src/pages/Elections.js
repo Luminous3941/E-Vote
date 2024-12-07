@@ -1,6 +1,6 @@
-import OngoingElect from './OngoingElect'; 
-import UpcomingElect from './UpcomingElect';
-import LastElectionResult from './LastElectionResult'
+import OngoingElect from '../components/OngoingElect'; 
+import UpcomingElect from '../components/UpcomingElect';
+import LastElectionResult from '../components/LastElectionResult'
 
 
 const Elections = () =>{

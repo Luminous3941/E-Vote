@@ -19,21 +19,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
+    <nav className="bg-gray-800 p-4 w-full  text-white flex justify-between items-center">
       <div className="flex items-center">
-        <div className="text-lg font-semibold">
+        <Link to='/' className="text-lg font-semibold">
           E-Voting
-        </div>
+        </Link>
       </div>
       <div className="flex items-center">
         {/* For Desktop and Tab view */}
         <div className="hidden md:flex space-x-4">
           <Link to='/' className="px-4 py-2 hover:bg-gray-600" >Home</Link>
           <Link to='/elections' className="px-4 py-2 hover:bg-gray-600">Elections</Link>
-          <Link to='/idverify'>
+          <Link to='/results'>
             <button className="px-4 py-2 hover:bg-gray-600">Results</button>
           </Link>
-          <button className="px-4 py-2 hover:bg-gray-600">About Us</button>
+          <Link to='/about' className="px-4 py-2 hover:bg-gray-600">About Us</Link>
         </div>
         {/* For Mobile view */}
         <div className="md:hidden relative">
@@ -41,16 +41,20 @@ const Navbar = () => {
             <i className="material-icons">menu</i>
           </button>
           {isDropdownOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-gray-700 shadow-xl rounded">
+            <div className="absolute clear-right mt-5 w-[130px] items-center grid justify-center opacity-90 bg-gray-800 shadow-xl rounded">
               <ul className="text-white text-sm">
-                <li className="px-4 py-2 hover:bg-gray-600">Home</li>
+                <Link to='/'>
+                  <li className="px-10 my-1 opacity-80 py-1 rounded-lg hover:bg-gray-400">Home</li>
+                </Link>
                 <Link to='/elections'> 
-                  <li className="px-4 py-2 hover:bg-gray-600">Elections</li>
+                  <li className="px-10 my-1 opacity-80 py-1 rounded-lg hover:bg-gray-400">Elections</li>
                 </Link>
-                <Link to='/idverify'>
-                  <li className="px-4 py-2 hover:bg-gray-600">Results</li>
+                <Link to='/results'>
+                  <li className="px-10 my-1 opacity-80 py-1 rounded-lg hover:bg-gray-400">Results</li>
                 </Link>
-                <li className="px-4 py-2 hover:bg-gray-600">About Us</li>
+                <Link to='/about'>
+                  <li className="px-10 my-1 opacity-80 py-1 rounded-lg hover:bg-gray-400 truncate">About Us</li>
+                </Link>
               </ul>
             </div>
           )}
@@ -63,7 +67,7 @@ const Navbar = () => {
               <button
                 onClick={connectMetamask}
                 className="absolute right-0 mt-2 bg-yellow-400 text-gray-800 py-1 px-3 rounded flex items-center">
-                <img src="metamask-logo.png" alt="Metamask Logo" className="w-4 h-4 mr-2" />
+                <img src="../Img/metamask.png" alt="Metamask Logo" className="w-4 h-4 mr-2" />
                 Connect Metamask
               </button>
             )}

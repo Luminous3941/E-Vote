@@ -42,7 +42,7 @@ const UpcomingElect = () =>{
   }, []);
 
     return(
-        <div className=" max-w-sm mx-10 md:mx-auto my-3 bg-gradient-to-r  from-yellow-400 to-yellow-200 p-6 rounded-lg shadow-lg">
+        <div className=" max-w-sm mx-3 xm:mx-auto my-3 bg-gradient-to-r  from-yellow-400 to-yellow-200 py-6 px-3 rounded-lg shadow-lg">
             <div className='flex flex-row justify-between'>
                 <h1 className="text-xs font-semibold mb-2">2019 Presidential Election Result</h1>
                 <p className='text-xs'>Upcoming</p>
